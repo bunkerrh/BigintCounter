@@ -7,23 +7,21 @@ public class Main {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 	
+		Counter test1 = new Counter();
 		
-		Runnable test = new Counter();
+		myThread1 t1 = new myThread1(test1);
+		myThread2 t2 = new myThread2(test1);
 		
-		Runnable test2 = new Counter();
-		
-		Thread thread1 = new Thread(test);
-		Thread thread2 = new Thread(test);
-		Thread thread3 = new Thread(test);
-		
-		thread1.start();
-		thread2.start();
-		thread3.start();
+		t1.start();
+		t2.start();
 		
 		
-		System.out.println("Hello World");
-		//OK lets see what we can get away with 
 		
-		//TODO: I completely forget what it was i had planned to do.
+		
+		/*This is a very barebones counter. The idea is to count to a very very large number as large as possible Think 10^22,000,000
+		 * 
+		 */
+		
+	
 }
 }
